@@ -1,0 +1,16 @@
+
+Chaves:
+=======
+
+- oem@Server
+- oem@Device
+- oem@Service
+- oem@Base
+- oem@Virtualenv (venv)
+- oem@Envoronment
+- oem@Scipt
+- oem@Files
+- oem@Diretory
+- oem@Machine
+- oem@VirtualMachine
+- oem@VMStatics
