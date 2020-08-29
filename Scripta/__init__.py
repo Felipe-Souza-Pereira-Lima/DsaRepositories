@@ -1,10 +1,10 @@
 from time import sleep, strftime
 from os import startfile, system
-
+from Scripta.Main import main
 __version__ = '1.0.2'
 
 def init():
-    pass
+    print(f'Script Control Python interpret module version {__version__}')
 def migrateWarnings(Warnings):
     for i in Warnings:
         return i
@@ -59,8 +59,9 @@ def exe(filelocal):
         print('Esse programa não existe!')
     else:
         print(f'{filelocal} Foi iniciado!')
-def funcname(self, parameter_list):
-    pass
+def aleatory(choose):
+    result = main(str, choose, '0.0.0.0', Read_Only=True)
+    return result
 class string(str):
     pass
 class numberint(int):
@@ -69,4 +70,3 @@ class numberfloat(float):
     pass
 class TrueValues(bool):
     pass
-
