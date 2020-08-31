@@ -6,10 +6,6 @@ __version__ = '1.0.2'
 
 def init():
     pass
-def migrateWarnings(Warnings, where):
-    wherees = Warnings
-    del Warnings
-    return wherees
 def echo(text):
     print(text)
     pass
@@ -23,6 +19,9 @@ def connect_to(ip, port):
         print('Erro ao conectar!')
     else:
         print(f'Conectado com sucesso a IP: [{ip}] Porta: [{port}]')
+        while True:
+            e = input('Você: ')
+            c.send(e: 1024)
 def server_init(ip, port, listen):
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -32,8 +31,13 @@ def server_init(ip, port, listen):
         print('Erro ao criar o servidor!')
     else:
         print('Servidor criado com sucesso!')
+        s.accept()
+        while True:
+            me = s.recv(1024)
+            print(me)
 def command(systemcommand):
     system(systemcommand)
+    pass
 def wait(seconds):
     try:
         sleep(seconds)
@@ -46,11 +50,3 @@ def exe(filelocal):
         print('Esse programa não existe!')
     else:
         print(f'{filelocal} Foi iniciado!')
-class string(str):
-    pass
-class numberint(int):
-    pass
-class numberfloat(float):
-    pass
-class TrueValues(bool):
-    pass
