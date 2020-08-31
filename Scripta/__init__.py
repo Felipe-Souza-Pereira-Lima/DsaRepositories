@@ -6,14 +6,10 @@ __version__ = '1.0.2'
 
 def init():
     pass
-def migrateWarnings(Warnings):
-    for i in Warnings:
-        if i is not None:
-            return i
-        else:
-            continue
-    else:
-        return False
+def migrateWarnings(Warnings, where):
+    wherees = Warnings
+    del Warnings
+    return wherees
 def echo(text):
     print(text)
     pass
