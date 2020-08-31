@@ -2,7 +2,9 @@ from time import sleep, strftime
 from os import startfile, system
 import socket
 
-__version__ = '1.0.2'
+__version__ = '2.0'
+__package__ = 'Scripta'
+__language__ = 'Português (Brasil)'
 
 def init():
     pass
@@ -19,9 +21,9 @@ def connect_to(ip, port):
         print('Erro ao conectar!')
     else:
         print(f'Conectado com sucesso a IP: [{ip}] Porta: [{port}]')
-        while True:
-            e = input('Você: ')
-            c.send(e: 1024)
+def confirm(justific, line):
+    print(justific)
+    input(line)
 def server_init(ip, port, listen):
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -32,9 +34,6 @@ def server_init(ip, port, listen):
     else:
         print('Servidor criado com sucesso!')
         s.accept()
-        while True:
-            me = s.recv(1024)
-            print(me)
 def command(systemcommand):
     system(systemcommand)
     pass
