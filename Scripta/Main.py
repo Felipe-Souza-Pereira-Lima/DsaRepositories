@@ -1,15 +1,16 @@
 from time import sleep
 if __name__ == '__main__':
-    def main(typeof, value, connect, Read_Only):
-        for i in value:
-            keys = [i, typeof, connect]
-            if Read_Only == True:
-                return keys
-            if Read_Only is None:
-                continue
+   def Read_Only(filename, keyword):
+      result = None
+      try:
+         with open(filename, 'rt') as file:
+            if keyword in file:
+               result = f'Chave encontrada no arquivo {filename}'
+               return result
             else:
-                return 'Requesitos não encontrados'
-        else:
-            return False
-        yield Read_Only, True, 1, 2, 3
-    
+               result = f'Chave não encontrada no arquivo {filename}'
+      except FileNotFoundError:
+         print('Esse arquivo não existe!')
+         result = False
+         return result
+      return result

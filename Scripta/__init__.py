@@ -1,33 +1,25 @@
 from time import sleep, strftime
 from os import startfile, system
-from Scripta.Main import main
+import socket
+
 __version__ = '1.0.2'
 
 def init():
-    print(f'Script Control Python interpret module version {__version__}')
+    pass
 def migrateWarnings(Warnings):
     for i in Warnings:
-        return i
+        if i is not None:
+            return i
+        else:
+            continue
     else:
-        i = False
         return False
-    return i
 def echo(text):
     print(text)
     pass
 def additions(code):
     code
-def translate(value):
-    print(value)
-    for result in value:
-        if result is not None:
-            return result
-        else:
-            result = 'Tradução não encontrada'
-            return result
-    return result
 def connect_to(ip, port):
-    import socket
     try:
         c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         c.connect(ip, port)
@@ -36,7 +28,6 @@ def connect_to(ip, port):
     else:
         print(f'Conectado com sucesso a IP: [{ip}] Porta: [{port}]')
 def server_init(ip, port, listen):
-    import socket
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.bind((ip, port))
@@ -59,9 +50,6 @@ def exe(filelocal):
         print('Esse programa não existe!')
     else:
         print(f'{filelocal} Foi iniciado!')
-def aleatory(choose):
-    result = main(str, choose, '0.0.0.0', Read_Only=True)
-    return result
 class string(str):
     pass
 class numberint(int):
