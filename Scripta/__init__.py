@@ -65,12 +65,3 @@ def trying(tentar, mensagem_de_erro):
         tentar
     except:
         print(mensagem_de_erro)
-# escritor milenar
-def repetidor_ate(repetir, msg):
-    for c in range(0, repetir):
-        print(msg)
-    return True
-# replicar
-def replicador(texto, oque, peloque):
-    resu = texto.replace(oque, peloque)
-    return resu
