@@ -12,7 +12,6 @@ def init():
 # Escreva na tela
 def echo(text):
     print(text)
-    pass
 # Adiciona mais cmmandos na linha
 def additions(code):
     code
@@ -60,3 +59,18 @@ def maybe(comparador, repositorio, SeTrue, SeFalse):
         SeTrue
     else:
         SeFalse
+# Tentar de uma linha
+def trying(tentar, mensagem_de_erro):
+    try:
+        tentar
+    except:
+        print(mensagem_de_erro)
+# escritor milenar
+def repetidor_ate(repetir, msg):
+    for c in range(0, repetir):
+        print(msg)
+    return True
+# replicar
+def replicador(texto, oque, peloque):
+    resu = texto.replace(oque, peloque)
+    return resu
