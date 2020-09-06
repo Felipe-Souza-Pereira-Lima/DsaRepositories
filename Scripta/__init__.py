@@ -45,7 +45,7 @@ Class Scripta:
         try:
             sleep(seconds)
         except:
-            print('TypeError não é possivel esperar strings ou TrueValues\n')
+            raise TypeError('não é possivel esperar strings ou TrueValues\n')
 # Executa programas .exe
     def exe(filelocal):
         try:
@@ -60,9 +60,9 @@ Class Scripta:
             SeTrue
         else:
             SeFalse
-            
-    def open_write(to_open, str, mode='r'):
-        with open(to_open, mode) as f:
+# abre e escreve algo em um arquivo
+    def open_write(to_open, str, mode='a'):
+        with open(to_open, '') as f:
             write(f, str)
 # Tentar de uma linha
     def trying(tentar, mensagem_de_erro):
