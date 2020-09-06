@@ -8,7 +8,7 @@ __language__ = 'Português (Brasil)'
 
 # Inicia o código
 Class Scripta:
-    def init():
+    def __init__():
         pass
 # Escreva na tela
     def echo(text):
