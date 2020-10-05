@@ -4,4 +4,4 @@ Python, assim importando só uma biblioteca você pode usar varios
 comandos avançados assim podendo diminuir o codigo e economizar espaço de
 arquivo!
 ## Status
-em andamento...
+Parado no momento
