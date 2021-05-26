@@ -1,67 +1,42 @@
-from time import sleep, strftime
-from os import startfile, system
-import socket
+from time import sleep
+from os import startfile, system, chdir, getcwd
 
-__version__ = '1.0.4'
-__package__ = 'Scripta'
-__language__ = 'Português (Brasil)'
 
-# Inicia o código
-def init():
-    pass
-# Escreva na tela
-def echo(text):
-    print(text)
-# Adiciona mais cmmandos na linha
-def additions(code):
-    code
-# Conecta com servidor IPV4\TCP
-def connect_to(ip, port):
-    try:
-        c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        c.connect(ip, port)
-    except:
-        print('Erro ao conectar!')
+
+# Imprimir mensage na tela e usar time.sleep
+def echo_delay(mensage, time=1):
+    print(mensage)
+    sleep(time)
+
+# Só imprime na tela
+def echo_(mensage):
+    print(mensage)
+    
+
+# Extrutura condicional executavel
+def condition(Comp_A, Comp_B, SeSim, SeNao):
+    if Comp_A == Comp_B:
+        print(SeSim)
     else:
-        print(f'Conectado com sucesso a IP: [{ip}] Porta: [{port}]')
-# Cria servidor socket IPV4\TCP
-def server_init(ip, port, listen):
-    try:
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.bind((ip, port))
-        s.listen(listen)
-    except:
-        print('Erro ao criar o servidor!')
+        print(SeNao)
+
+
+# Localização PATH da pasta
+def path():
+    return getcwd()
+
+# Navegação entre pastas rapida
+def cd_(folder=""):
+    if folder == "":
+        chdir("..")
     else:
-        print('Servidor criado com sucesso!')
-        s.accept()
-# Executa comandos do sistema
-def command(systemcommand):
-    system(systemcommand)
-    pass
-# Esperar
-def wait(seconds):
-    try:
-        sleep(seconds)
-    except:
-        print('TypeError não é possivel esperar strings ou TrueValues\n')
-# Executa programas .exe
-def exe(filelocal):
-    try:
-        startfile(filelocal)
-    except:
-        print('Esse programa não existe!')
-    else:
-        print(f'{filelocal} Foi iniciado!')
-# Condição rapida
-def maybe(comparador, repositorio, SeTrue, SeFalse):
-    if comparador == repositorio:
-        SeTrue
-    else:
-        SeFalse
-# Tentar de uma linha
-def trying(tentar, mensagem_de_erro):
-    try:
-        tentar
-    except:
-        print(mensagem_de_erro)
+        chdir(folder)
+
+# Rapidos comandos
+def shell(comando):
+    system(comando)
+
+# Iniciando aplicativo
+def start(apps):
+    startfile(apps)
+
